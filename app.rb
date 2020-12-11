@@ -17,16 +17,24 @@ class Battle < Sinatra::Base
       redirect '/play'
     end
 
-  get '/play' do
-    @game = $game
-    erb :play
-  end
+    get '/play' do
+      @game = $game
+      erb :play
+    end
 
-  get '/attack' do
-    @game = $game
-    @game.attack(@game.player_2)
-    erb :attack
-  end
+    get '/p1-attack' do
+      p 'hello world'
+      @game = $game
+      @game.attack(@game.player_2)
+      erb :attack
+    end
+
+    get '/p2-attack' do
+      p 'hello'
+      @game = $game
+      @game.attack(@game.player_1)
+      erb :attack
+    end
 
     run! if app_file == $0
 end

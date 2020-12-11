@@ -1,8 +1,15 @@
 <div>
-<%=@game.player_1.name %> vs <%=@game.player_2.name %>
+<%= @game.player_1.name %> vs <%= @game.player_2.name %> <br>
 </div>
 <div>
-<%=@game.player_2.name %>: <%=@game.player_2.name %>HP
+<%= @game.player_2.name %>: <%= @game.player_2.hp %>HP <br>
 </div>
 
-<a href="/attack">Attack</a>
+<div>
+<%= @game.player_1.name %>: <%= @game.player_1.hp %>HP <br>
+</div>
+
+<a href="/p1-attack">P1 Attack</a>
+<div>
+<a href="/p2-attack">P2 Attack</a>
+</div>
