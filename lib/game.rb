@@ -2,10 +2,10 @@ require_relative 'player'
 
 class Game
 
-    attr_accessor :players
+    attr_accessor :players, :player_1, :player_2
 
   def initialize(player_1, player_2)
-    @players = [player_1, player_2]
+    @players = [@player_1, @player_2]
   end
 
   def attack(player)
